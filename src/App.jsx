@@ -1,6 +1,6 @@
-import Navbar from './components/navbar'
-import Home from './pages/Home'
-import About from './pages/About'
+import Navbar from './components/navbar.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
 
 function App() {
   return (

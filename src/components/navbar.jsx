@@ -1,15 +1,19 @@
 function Navbar() {
   return (
-    <nav>
-      <h2>Dulara</h2>
+    <nav className="fixed w-full bg-gray-950 text-white px-10 py-5 flex justify-between items-center shadow-lg">
+      
+      <h1 className="text-2xl font-bold">
+        Dulara
+      </h1>
 
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Contact</li>
+      <ul className="flex gap-8 text-lg">
+        <li className="hover:text-blue-400 cursor-pointer">Home</li>
+        <li className="hover:text-blue-400 cursor-pointer">About</li>
+        <li className="hover:text-blue-400 cursor-pointer">Skills</li>
+        <li className="hover:text-blue-400 cursor-pointer">Projects</li>
+        <li className="hover:text-blue-400 cursor-pointer">Contact</li>
       </ul>
+
     </nav>
   )
 }

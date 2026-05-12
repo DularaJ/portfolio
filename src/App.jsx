@@ -1,6 +1,6 @@
 // src/App.jsx
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';

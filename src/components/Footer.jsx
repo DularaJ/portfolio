@@ -29,7 +29,6 @@ const Footer = () => {
           
           <div className="footer-bottom">
             <p>&copy; {currentYear} Dulara. All rights reserved.</p>
-            <p>Built with React & ❤️</p>
           </div>
         </div>
       </div>

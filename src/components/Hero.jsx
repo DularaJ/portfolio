@@ -11,6 +11,15 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
+      <div className="hero-particles">
+        <span className="particle particle-1" />
+        <span className="particle particle-2" />
+        <span className="particle particle-3" />
+        <span className="particle particle-4" />
+        <span className="particle particle-5" />
+        <span className="particle particle-6" />
+        <span className="particle particle-7" />
+      </div>
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-badge">Welcome to my portfolio</div>

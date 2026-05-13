@@ -6,12 +6,25 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  // Map display names to section IDs
+  const getSectionId = (itemName) => {
+    const mapping = {
+      'Home': 'home',
+      'About': 'about',
+      'Skills': 'skills',
+      'Projects': 'projects',
+      'Blog': 'posts',      // Blog maps to 'posts' ID
+      'Contact': 'contact'
+    };
+    return mapping[itemName];
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
       // Update active section based on scroll
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'posts', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -38,6 +51,8 @@ const Navbar = () => {
     }
   };
 
+  const navItems = ['Home', 'About', 'Skills', 'Projects', 'Blog', 'Contact'];
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
@@ -46,11 +61,11 @@ const Navbar = () => {
         </div>
 
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {navItems.map((item) => (
             <a
               key={item}
-              className={`nav-link ${activeSection === item.toLowerCase() ? 'active' : ''}`}
-              onClick={() => scrollToSection(item.toLowerCase())}
+              className={`nav-link ${activeSection === getSectionId(item) ? 'active' : ''}`}
+              onClick={() => scrollToSection(getSectionId(item))}
             >
               {item}
             </a>

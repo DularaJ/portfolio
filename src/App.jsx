@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Posts from './components/Posts'; 
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';  // Make sure this line exists
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Posts />
       <Contact />
       <Footer />
     </div>
